@@ -37,9 +37,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Yakoba Dev",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "yakobadeveloper@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -74,6 +74,31 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        
+        <div className='mt-6 flex flex-col gap-4'>
+          <a 
+            href='mailto:yakobadeveloper@gmail.com'
+            className='text-secondary hover:text-accent transition-colors duration-300'
+          >
+            📧 yakobadeveloper@gmail.com
+          </a>
+          <a 
+            href='https://github.com/Yakob-B'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary hover:text-accent transition-colors duration-300'
+          >
+            💻 GitHub: github.com/Yakob-B
+          </a>
+          <a 
+            href='https://linkedin.com/in/yakoba'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary hover:text-accent transition-colors duration-300'
+          >
+            🔗 LinkedIn: linkedin.com/in/yakoba
+          </a>
+        </div>
 
         <form
           ref={formRef}
@@ -116,7 +141,7 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-accent hover:bg-[#00CCE5] py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-neon-glow transition-all duration-300'
           >
             {loading ? "Sending..." : "Send"}
           </button>
