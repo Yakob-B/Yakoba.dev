@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  demo_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -33,17 +34,42 @@ const ProjectCard = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='bg-accent hover:bg-[#00CCE5] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 shadow-neon-glow'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
+            {demo_link && (
+              <div
+                onClick={() => window.open(demo_link, "_blank")}
+                className='bg-accent hover:bg-[#00CCE5] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 shadow-neon-glow'
+                title='Live Demo'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={2}
+                  stroke='white'
+                  className='w-5 h-5'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25'
+                  />
+                </svg>
+              </div>
+            )}
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className='bg-accent hover:bg-[#00CCE5] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 shadow-neon-glow'
+                title='Source Code'
+              >
+                <img
+                  src={github}
+                  alt='source code'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            )}
           </div>
         </div>
 
