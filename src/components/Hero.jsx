@@ -19,7 +19,7 @@ const Hero = () => {
             Hi, I'm <span className='text-accent'>Yakoba</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            MERN Stack & Android Developer <br className='sm:block hidden' />
+             Computer Science Undergrad | React & Node.js Expert | UX-Focused Product Builder <br className='sm:block hidden' />
             Building modern, secure, and animated user experiences
           </p>
         </div>
