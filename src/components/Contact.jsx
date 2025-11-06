@@ -91,7 +91,7 @@ const Contact = () => {
             💻 GitHub: github.com/Yakob-B
           </a>
           <a 
-            href='https://linkedin.com/in/yakoba'
+            href='https://www.linkedin.com/in/yakobb'
             target='_blank'
             rel='noopener noreferrer'
             className='text-secondary hover:text-accent transition-colors duration-300'

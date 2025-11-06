@@ -27,8 +27,8 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// import jobit from "./jobit.png";
+// import tripguide from "./tripguide.png";
 import rentify from "./rentify.png";
 import amboportal from "./amboportal.png";
 
@@ -59,8 +59,8 @@ export {
   starbucks,
   tesla,
   carrent,
-  jobit,
-  tripguide,
+  // jobit,
+  // tripguide,
   rentify,
   amboportal,
 };
