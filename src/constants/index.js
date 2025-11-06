@@ -22,6 +22,8 @@ import {
   carrent,
   jobit,
   tripguide,
+  rentify,
+  amboportal,
   threejs,
 } from "../assets";
 
@@ -162,45 +164,54 @@ const projects = [
     source_code_link: "https://github.com/Yakob-B",
   },
   {
-    name: "Home Rental & Management System",
+    name: "🏡 Rentify – Smart Rental Platform",
     description:
-      "Full-stack MERN application for property rental management. Includes features for listing properties, tenant management, payment tracking, and administrative dashboards with secure authentication.",
+      "Rentify is a full-stack web platform designed to simplify property and asset rentals in Ethiopia. It connects owners and renters through a secure and intuitive interface with modern features such as user authentication with role-based access (Admin, Owner, Renter), category-based listings for homes, cars, offices, and more, location-based recommendation system that shows nearby listings, image uploads via Cloudinary, booking and approval workflow, and future-ready payment integrations (Telebirr, Stripe). Fully responsive and animated UI built with TailwindCSS.",
     tags: [
       {
-        name: "MERN",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "REST API",
+        name: "MongoDB",
         color: "green-text-gradient",
       },
       {
-        name: "Tailwind",
+        name: "Express.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/Yakob-B",
+    image: rentify,
+    source_code_link: "https://github.com/Yakob-B/Rentify",
+    demo_link: "https://rentify-orcin-five.vercel.app",
   },
   {
-    name: "Department Information Portal - Ambo University",
+    name: "Ambo Portal",
     description:
-      "Modern information portal built with Next.js and Tailwind CSS providing comprehensive department information, faculty details, course information, and announcements for Ambo University departments.",
+      "A comprehensive educational dashboard portal for Ambo University featuring campus statistics, department overviews, and school information. The portal displays real-time data including student counts, faculty numbers, and department statistics with a modern dark-themed interface.",
     tags: [
       {
-        name: "Next.js",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "Tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Responsive",
+        name: "Dashboard",
         color: "green-text-gradient",
       },
+      {
+        name: "Dark Mode",
+        color: "pink-text-gradient",
+      },
     ],
-    image: tripguide,
+    image: amboportal,
     source_code_link: "https://github.com/Yakob-B",
   },
   {
