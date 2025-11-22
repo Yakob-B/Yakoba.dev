@@ -31,6 +31,7 @@ import carrent from "./carrent.png";
 // import tripguide from "./tripguide.png";
 import rentify from "./rentify.png";
 import amboportal from "./amboportal.png";
+import augcvs from "./augcvs.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   // tripguide,
   rentify,
   amboportal,
+  augcvs,
 };

@@ -24,6 +24,7 @@ import {
   // tripguide,
   rentify,
   amboportal,
+  augcvs,
   threejs,
 } from "../assets";
 
@@ -160,8 +161,9 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/Yakob-B",
+    image: augcvs,
+    source_code_link: "https://github.com/Yakob-B/AUGCVS",
+    demo_link: "https://augcvs.vercel.app/",
   },
   {
     name: "🏡 Rentify – Smart Rental Platform",

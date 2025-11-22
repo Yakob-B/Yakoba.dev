@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -31,37 +31,35 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Yakoba Dev",
-          from_email: form.email,
-          to_email: "yakobadeveloper@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
+    fetch("https://formspree.io/f/xzzwjbkn", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    })
+      .then((response) => {
+        setLoading(false);
+        if (response.ok) {
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm({
             name: "",
             email: "",
             message: "",
           });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
+        } else {
           alert("Ahh, something went wrong. Please try again.");
         }
-      );
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
+        alert("Ahh, something went wrong. Please try again.");
+      });
   };
 
   return (
@@ -74,15 +72,15 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-        
+
         <div className='mt-6 flex flex-col gap-4'>
-          <a 
+          <a
             href='mailto:yakobadeveloper@gmail.com'
             className='text-secondary hover:text-accent transition-colors duration-300'
           >
             📧 yakobadeveloper@gmail.com
           </a>
-          <a 
+          <a
             href='https://github.com/Yakob-B'
             target='_blank'
             rel='noopener noreferrer'
@@ -90,7 +88,7 @@ const Contact = () => {
           >
             💻 GitHub: github.com/Yakob-B
           </a>
-          <a 
+          <a
             href='https://www.linkedin.com/in/yakobb'
             target='_blank'
             rel='noopener noreferrer'
