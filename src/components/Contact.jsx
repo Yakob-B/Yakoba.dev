@@ -75,10 +75,10 @@ const Contact = () => {
 
         <div className='mt-6 flex flex-col gap-4'>
           <a
-            href='mailto:yakobadeveloper@gmail.com'
+            href='mailto:yakobatechno@gmail.com'
             className='text-secondary hover:text-accent transition-colors duration-300'
           >
-            📧 yakobadeveloper@gmail.com
+            📧 yakobatechno@gmail.com
           </a>
           <a
             href='https://github.com/Yakob-B'

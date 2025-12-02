@@ -32,6 +32,7 @@ import carrent from "./carrent.png";
 import rentify from "./rentify.png";
 import amboportal from "./amboportal.png";
 import augcvs from "./augcvs.png";
+import resume from "./Yakob_Bekuma_resume.pdf";
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   rentify,
   amboportal,
   augcvs,
+  resume,
 };

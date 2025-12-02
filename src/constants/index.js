@@ -26,6 +26,7 @@ import {
   amboportal,
   augcvs,
   threejs,
+  resume,
 } from "../assets";
 
 export const navLinks = [
@@ -40,6 +41,11 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "resume",
+    title: "Resume",
+    link: resume,
   },
 ];
 
