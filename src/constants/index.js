@@ -25,6 +25,7 @@ import {
   rentify,
   amboportal,
   augcvs,
+  timetable,
   threejs,
   resume,
 } from "../assets";
@@ -240,7 +241,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: timetable,
     source_code_link: "https://github.com/Yakob-B",
   },
 ];
