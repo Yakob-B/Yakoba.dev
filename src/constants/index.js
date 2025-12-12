@@ -224,9 +224,9 @@ const projects = [
     source_code_link: "https://github.com/Yakob-B",
   },
   {
-    name: "Timetable Scheduling App",
+    name: "Timetable Manager",
     description:
-      "Android application developed with Kotlin for managing and viewing class timetables. Features intuitive UI with smooth animations, offline support, and notification reminders for upcoming classes.",
+      "A comprehensive Android application built with Kotlin for managing academic schedules and daily tasks. Features a beautiful, color-coded weekly timetable view, integrated daily task planner with checkboxes, smooth animations, and an intuitive UI with search and settings functionality. Includes offline support, local database storage, and customizable task categories for classes, assignments, and personal activities.",
     tags: [
       {
         name: "Kotlin",
