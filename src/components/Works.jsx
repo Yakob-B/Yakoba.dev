@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import { Eye } from "lucide-react";
 
 import { motion } from "framer-motion";
 
@@ -8,6 +9,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({
   index,
@@ -17,6 +19,8 @@ const ProjectCard = ({
   image,
   source_code_link,
   demo_link,
+  onOpenModal,
+  project,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -71,6 +75,15 @@ const ProjectCard = ({
                 />
               </div>
             )}
+
+            {/* View Case Study Button */}
+            <div
+              onClick={() => onOpenModal(project)}
+              className='bg-accent hover:bg-[#00CCE5] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 shadow-neon-glow'
+              title='View Case Study'
+            >
+              <Eye size={20} color='white' />
+            </div>
           </div>
         </div>
 
@@ -95,6 +108,19 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -107,17 +133,29 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          These projects showcase my skills in MERN Stack and Android development. 
-          Each project demonstrates my ability to build secure, scalable, and 
+          These projects showcase my skills in MERN Stack and Android development.
+          Each project demonstrates my ability to build secure, scalable, and
           user-friendly applications with modern technologies and best practices.
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            {...project}
+            project={project}
+            onOpenModal={handleOpenModal}
+          />
         ))}
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </>
   );
 };
