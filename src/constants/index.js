@@ -226,10 +226,10 @@ const projects = [
   {
     name: "Timetable Manager",
     description:
-      "A comprehensive Android application built with Kotlin for managing academic schedules and daily tasks. Features a beautiful, color-coded weekly timetable view, integrated daily task planner with checkboxes, smooth animations, and an intuitive UI with search and settings functionality. Includes offline support, local database storage, and customizable task categories for classes, assignments, and personal activities.",
+      "A comprehensive Android application built with Java for managing academic schedules and daily tasks. Features a beautiful, color-coded weekly timetable view, integrated daily task planner with checkboxes, smooth animations, and an intuitive UI with search and settings functionality. Includes offline support, local database storage, and customizable task categories for classes, assignments, and personal activities.",
     tags: [
       {
-        name: "Kotlin",
+        name: "Java",
         color: "blue-text-gradient",
       },
       {
